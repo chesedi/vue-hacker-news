@@ -1,27 +1,14 @@
 <template>
   <div>
-    <div v-for="user in users">{{ user.title }}</div>
+    <ListItem></ListItem>
   </div>
 </template>
 
 <script>
-import { fetchNewsList } from '../api/index.js';
+import ListItem from '../components/ListItem.vue';
 export default {
-  data() {
-    return {
-      users: []
-    }
+  components: {
+    ListItem,
   },
-  created() {
-    fetchNewsList()
-      .then(response => this.users = response.data)
-      .catch()
-
-  },
-
-}
+};
 </script>
-
-<style>
-
-</style>
