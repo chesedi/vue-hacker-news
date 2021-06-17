@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <Toolbar></Toolbar>
+    <Spinner :loading="loadingStatus"></Spinner>
     <transition name="page">
       <router-view></router-view>
     </transition>
-    <Spinner :loading="loadingStatus"></Spinner>
   </div>
 </template>
 
