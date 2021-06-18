@@ -35,6 +35,9 @@ export default {
   created() {
     bus.$on('start:spinner', this.startSpinner);
     bus.$on('end:spinner', this.endSpinner);
+
+    // 환경변수 실습
+    console.log(process.env.VUE_APP_TITLE);
   },
   beforeDestroy() {
     bus.$off('start:spinner', this.startSpinner);
